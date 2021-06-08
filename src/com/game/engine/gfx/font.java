@@ -4,7 +4,7 @@ import com.game.engine.gfx.font;
 import com.game.engine.gfx.image;
 
 public class font {
-	public static final font STANDARD = new font("/fonts/font.png");
+	public static final font STANDARD = new font("/fonts/standard.png");
 	private image fontImage;
 	// parallel arrays to store individual widths of each characters
 	private int[] offsets;
@@ -12,8 +12,8 @@ public class font {
 
 	public font(String path) {
 		fontImage = new image(path);
-		offsets = new int[59];
-		widths = new int[59];
+		offsets = new int[256];
+		widths = new int[256];
 		int unicode = 0;
 		// marks end of width in the font image
 		float hexcode1 = 0xff0000ff;

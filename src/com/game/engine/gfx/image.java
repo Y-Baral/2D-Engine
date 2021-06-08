@@ -1,6 +1,5 @@
 package com.game.engine.gfx;
 
-import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
@@ -11,14 +10,7 @@ public class image {
 	private int height;
 	private int[] pixels;
 	private boolean alpha = false;
-
-	public boolean isAlpha() {
-		return alpha;
-	}
-
-	public void setAlpha(boolean alpha) {
-		this.alpha = alpha;
-	}
+	private int lightBlock = light.NONE;
 
 	public image(String path) {
 		BufferedImage image = null;
@@ -63,6 +55,22 @@ public class image {
 
 	public void setPixels(int[] pixels) {
 		this.pixels = pixels;
+	}
+
+	public int getLightBlock() {
+		return lightBlock;
+	}
+
+	public void setLightBlock(int lightBlock) {
+		this.lightBlock = lightBlock;
+	}
+
+	public boolean isAlpha() {
+		return alpha;
+	}
+
+	public void setAlpha(boolean alpha) {
+		this.alpha = alpha;
 	}
 
 }
